@@ -1,0 +1,22 @@
+architecture: replication
+auth:
+  rootPassword: wiot360-root
+  replicationPassword: wiot360-repl
+  username: api
+  password: wiot360-dev
+  database: iplog
+  host: "%"
+primary:
+  persistence:
+    enabled: true
+    storageClass: local-path
+    size: 1Gi
+  service:
+    type: NodePort
+    nodePort: 30306
+secondary:
+  replicaCount: 2
+  persistence:
+    enabled: true
+    storageClass: local-path
+    size: 1Gi
