@@ -11,6 +11,9 @@ primary:
     enabled: true
     storageClass: local-path
     size: 1Gi
+  configuration: |
+    [mysqld]
+    bind-address = 0.0.0.0
   service:
     type: NodePort
     nodePort: 30306
