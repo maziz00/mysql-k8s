@@ -18,7 +18,7 @@ kubectl apply -f cluster-config/web-secret.yml
 
 # Build and load API image
 sudo docker build -t api-image:latest api/
-sudo docker save api-image:latest -o api-image.tar
+# sudo docker save api-image:latest -o api-image.tar
 sudo k3s ctr images import api-image.tar
 
 # Deploy API

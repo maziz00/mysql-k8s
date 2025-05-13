@@ -22,6 +22,8 @@ spec:
         env:
         - name: MYSQL_HOST
           value: mysql-primary.db.svc.cluster.local
+        - name: MYSQL_PORT
+          value: "3306"
         - name: MYSQL_USER
           value: api
         - name: MYSQL_PASSWORD
